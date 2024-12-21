@@ -1,9 +1,10 @@
 /* Global Styles */
+/*Login */
 body {
   padding: 0;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; 
+  background-color: #f4f4f4;
   color: #333;
 }
 
@@ -24,17 +25,20 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
-
-.page-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Form Elements */
+/* Form elements */
 .form-group {
-  margin: 10px 0;
+  margin-bottom: 20px;
+  
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input {
@@ -44,18 +48,17 @@ input {
   font-size: 16px;
 }
 
-.primary-button {
-  width: 323px;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  border: none;
-  margin-top: 1px;
-  cursor: pointer;
+.new-to-shemart-text {
+  margin-top: 30px;
+  margin-left: -50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
 }
 
-.primary-button:hover {
-  background-color: black;
+.new-to-shemart-text .highlight {
+  font-weight: bold;
+  color: red;
 }
 
 /* Links */
@@ -68,10 +71,97 @@ input {
   font-size: 13px;
 }
 
-.forgot-password:hover,
-.form-footer a:hover {
-  text-decoration: none; 
+.forgot-password:hover {
+  text-decoration: underline;
 }
+
+.create-account-box {
+  width: 292px;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.create-account-box:hover {
+  background-color: black;
+  color: white; 
+}
+.primary-button {
+  width: 323px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+
+/* SignUp */
+
+
+
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.primary-buttons {
+  width:100%;
+  padding: 10px;
+  color: white;
+  background-color:black;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.account-text {
+  color: red;
+}
+
+.login-link {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+
+.required::after {
+  content: '*';
+  color: red;
+  margin-left: 5px;
+}
+
+
 
 /* Footer Styles */
 .footer {
@@ -79,15 +169,17 @@ input {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   padding: 20px;
   border-top: 1px solid #ccc;
 }
 
+
+
 .footer-column ul {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-column {
@@ -110,7 +202,7 @@ input {
   font-size: 14px;
 }
 .footer-column a svg {
-  margin-right: 6px; 
+  margin-right: 6px;
 }
 
 .footer-column a:hover {
@@ -122,15 +214,6 @@ input {
   padding: 5px;
   margin: 5px 0;
 }
-
-.subscribe-button {
-  padding: 5px 10px;
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
 /* Footer Bottom */
 .footer-bottom {
   width: 100%;
@@ -146,47 +229,6 @@ input {
   text-decoration: none;
 }
 
-.new-to-shemart-text {
-  margin-top: 30px; 
-  margin-left: -50px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.new-to-shemart-text .highlight {
-  font-weight: bold;
-  color: red;
-}
-
-.create-account-box {
-  width: 292px;
-  display: inline-block;
-  color: black;
-  font-weight: bold;
-  background-color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-  text-align: center;
-  border: 2px solid black;
-  cursor: pointer;
-}
-
-.create-account-box a {
-  text-decoration: none; 
-  color: black; 
-}
-
-.create-account-box a:hover {
-  text-decoration: none; 
-  color: black; 
-}
-
-.create-account-box:hover {
-  background-color: black;
-  color: white;
-  border: 2px solid black;
-}
 
 /* Footer Copyright */
 .footer-copyright {
@@ -196,6 +238,9 @@ input {
   font-size: 14px;
   color: #777;
 }
+
+
+
 /* Navbar Styles */
 .navbar {
   display: flex;
@@ -249,5 +294,3 @@ input {
   color: #333;
   text-decoration: none;
 }
-
-
