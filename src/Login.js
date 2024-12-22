@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "./styles.css";
-import Footer from "./footer";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -47,12 +48,9 @@ const Login = () => {
           New to <span className="highlight">Shemart</span>?
         </p>
         <p className="form-footer">
-          <a href="#" className="create-account-box">
-            CREATE AN ACCOUNT
-          </a>
+          <Link to="/signup" className="create-account-box">CREATE AN ACCOUNT</Link>
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

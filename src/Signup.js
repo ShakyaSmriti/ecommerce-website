@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "./styles.css";
-import Footer from "./footer";
+
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -15,16 +16,16 @@ const Signup = () => {
       return;
     }
 
-    setError(""); 
+    setError("");
     alert("Signup successful");
   };
 
   return (
     <div className="signup-page-container">
       <div className="signup-form-container">
-      <h2 className="page-title">
-  Create <span className="account-text">Account</span>
-</h2>
+        <h2 className="page-title">
+          Create <span className="account-text">Account</span>
+        </h2>
         <form onSubmit={handleSignup}>
           <div className="form-group">
             <label htmlFor="name" className="required">Name</label>
@@ -64,11 +65,9 @@ const Signup = () => {
             Create an Account
           </button>
         </form>
-        <a href="/login" className="login-link">
-          Already have an account? Login Here
-        </a>
+        <Link to="/login" className="login-link">Already have an account? Login Here</Link>
       </div>
-      <Footer />
+     
     </div>
   );
 };

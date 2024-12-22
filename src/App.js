@@ -1,18 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './navbar'; 
-import Login from './Login';
-import Signup from './Signup';
-import './styles.css'; 
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import Hero from "./components/Hero";
+import FeaturedProducts from "./components/FeaturedProducts";
+import Categories from "./components/Categories";
+import Signup from "./Signup";
+import Login from "./Login";
+import "./styles.css";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      <Navbar /> {/* Always visible */}
+      <div className="main-content"> {/* Main container for page content */}
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+      <Footer /> {/* Always visible */}
     </Router>
   );
 }
