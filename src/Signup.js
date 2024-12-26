@@ -64,7 +64,18 @@ const Signup = () => {
               required
             />
           </div>
-          
+
+          <div className="form-group checkbox-group">
+            <input
+              type="checkbox"
+              id="agree"
+              checked={agree}
+              onChange={() => setAgree(!agree)}
+            />
+            <label htmlFor="agree" className="checkbox-label">
+              I agree to the <Link to="/terms" className="terms-link">Terms and Conditions</Link>
+            </label>
+          </div>
 
           {error && <div className="error-message">{error}</div>}
           <button type="submit" className="primary-buttons">

@@ -169,6 +169,38 @@ input {
   margin-left: 5px;
 }
 
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.checkbox-group input {
+  width: auto;
+  margin-right: 5px;
+  transform: translateY(-3px);  
+
+}.checkbox-group input {
+  width: auto;
+  margin-right: 5px;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: black;
+  line-height: 20px;
+  vertical-align: middle;  
+}
+
+.terms-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+
 /* Footer Styles */
 footer {
   display: flex;
