@@ -131,7 +131,7 @@ input {
 .error-message {
   color: red;
   font-size: 12px;
-  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .primary-buttons {
@@ -170,15 +170,15 @@ input {
 }
 
 /* Footer Styles */
-.footer {
+footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: #f0f0f0;
+  background-color: white;
   padding: 20px;
-  border-top: 1px solid #ccc;
 }
+
 
 .footer-column ul {
   list-style-type: none;
@@ -313,7 +313,6 @@ input {
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url('./assets/hero.jpg');
   background-size: cover;
   background-position: center;
   height: 600px;  
@@ -328,8 +327,13 @@ input {
 .hero h1 {
   font-size: 3rem;
   margin: 0;
-  font-weight: bold;
+  font-weight: bolder;
 }
+
+.highlight {
+  color: #800000; 
+}
+
 
 .hero p {
   font-size: 1.5rem;
@@ -445,4 +449,219 @@ input {
 .category h3 {
   font-size: 1.5rem;
   color: #333;
+}
+
+/* HomePage */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  padding: 50px;
+  position: relative;
+  height: 600px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2; 
+  display: flex;
+  flex-direction: column; 
+ margin-top:100px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #fff; 
+  margin-bottom: 20px; 
+}
+
+.step {
+  color: black;
+}
+
+.fashion {
+  color: white ;
+}
+
+.highlight {
+  color:maroon;
+}
+
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.7; 
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1; 
+}
+
+.shop-now {
+  color: black;
+  border: 3px solid black;
+  padding: 20px 10px;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 2;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.shop-now:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 20px;
+  background-color:white;
+  
+ 
+}
+
+.feature {
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature i {
+  font-size: 1.5rem;
+  color: red;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover i {
+  transform: scale(1.2);
+  animation: shake 0.5s ease infinite;
+}
+
+.feature p {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  font-weight: bolder;
+}
+
+.feature span {
+  font-size: 1rem;
+  color: #555;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.daily-deals {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.daily-deals h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+.daily-deals-heading {
+  text-align: center; 
+  text-decoration: underline; 
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.deals-highlight {
+  color: darkred;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.product {
+  background-color: #fff;
+  border: 2.5px solid black;
+  border-radius: 1px;
+  padding: 1rem;
+  text-align: left;
+  max-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img,
+.product video {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+  border-radius:0px;
+}
+
+.product p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: black;
+}
+
+.product span {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

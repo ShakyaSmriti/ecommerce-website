@@ -6,14 +6,14 @@ import "./styles.css";
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const searchRef = useRef(null);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSearchClick = () => {
     setShowSearch(!showSearch);
   };
 
   const handleProfileClick = () => {
-    navigate("/login"); // Navigate to the Login page when the profile icon is clicked
+    navigate("/login");
   };
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="navbar-links">
-        <li><Link to="#">Home</Link></li>
+        <li><Link to="/">Home</Link></li>
         <li><Link to="#">Clothing</Link></li>
         <li><Link to="#">Footwear</Link></li>
         <li><Link to="#">Accessories</Link></li>

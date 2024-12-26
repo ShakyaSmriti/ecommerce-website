@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "./styles.css";
-
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
 
   const handleSignup = (e) => {
     e.preventDefault();
     if (password.length < 8) {
       setError("Password must be at least 8 characters long.");
+      return;
+    }
+    if (!agree) {
+      setError("You must agree to the terms and conditions.");
       return;
     }
 
@@ -60,6 +64,8 @@ const Signup = () => {
               required
             />
           </div>
+          
+
           {error && <div className="error-message">{error}</div>}
           <button type="submit" className="primary-buttons">
             Create an Account
@@ -67,7 +73,6 @@ const Signup = () => {
         </form>
         <Link to="/login" className="login-link">Already have an account? Login Here</Link>
       </div>
-     
     </div>
   );
 };
