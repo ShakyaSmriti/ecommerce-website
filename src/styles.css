@@ -1,6 +1,10 @@
 /* Global Styles */
 /*Login */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+
+}
 
 body {
   padding: 0;
@@ -30,7 +34,10 @@ body {
   flex-grow:1;
 }
 
-
+.login-text {
+  margin-top: 100px;
+  color: red;
+}
 
 /* Form elements */
 .form-group {
@@ -53,7 +60,7 @@ input {
 }
 
 .new-to-shemart-text {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: -50px;
   font-size: 22px;
   font-weight: bold;
@@ -75,6 +82,10 @@ input {
   font-size: 13px;
 }
 
+.form-footer {
+  margin-top: -10px; 
+}
+
 .forgot-password:hover {
   text-decoration: underline;
   color: blue;
@@ -91,6 +102,7 @@ input {
   text-align: center;
   border: 2px solid black;
   cursor: pointer;
+
 }
 .create-account-box:hover {
   background-color: black;
@@ -104,7 +116,16 @@ input {
   border: none;
   margin-top: 1px;
   cursor: pointer;
+  
 }
+.account-text {
+  color: red;
+}
+.create-text{
+  color:black;
+}
+
+
 
 
 /* SignUp */
@@ -127,6 +148,10 @@ input {
   flex-grow: 1;
 }
 
+.page-title{
+  margin-top: 100px;
+}
+
 
 .error-message {
   color: red;
@@ -145,9 +170,9 @@ input {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.account-text {
-  color: red;
-}
+
+
+
 
 .login-link {
   display: block;
@@ -207,8 +232,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: white;
-  padding: 20px;
+  background-color: black;
+  padding: 25px;
 }
 
 
@@ -219,22 +244,22 @@ footer {
 }
 
 .footer-column {
-  flex: 1;
+  flex: 5;
   margin: 10px;
 }
 
 .footer-column h3 {
   margin-bottom: 20px; 
   font-size: 16px;
-  color: #333;
+  color: white;
 }
 
 .footer-column a {
   display: flex;
   align-items: center;
-  color: black;
+  color: white;
   text-decoration: none;
-  margin: 5px 0;
+  margin: 5px ;
   font-size: 14px;
   letter-spacing: 0.5px;
   word-spacing: 2px;
@@ -245,29 +270,12 @@ footer {
 }
 
 .footer-column a:hover {
-  text-decoration: underline;
-  color: #555; 
+  color: red; 
 }
 
 .footer-column ul li {
   margin-bottom: 10px; 
 }
-
-/* Footer Bottom */
-.footer-bottom {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #eaeaea;
-  font-size: 14px;
-  color: #555;
-  margin-top: 20px;
-}
-
-.footer-bottom a {
-  text-decoration: none;
-}
-
 
 /* Footer Copyright */
 .footer-copyright {
@@ -278,6 +286,15 @@ footer {
   color: #777;
 }
 
+.map-container {
+  margin-top: 10px;
+}
+
+.map-container iframe {
+  width: 500px;
+  height: 400px;
+
+}
 
 
 /* Navbar Styles */
@@ -286,16 +303,25 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: 13px 35px;
+  padding: 10px 0.5px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  padding-top: 70px;
 }
 
 .navbar-logo h1 {
-  color: red; 
-  font-family: 'Playfair Display', serif; 
+  color: red;
+  font-family: 'Dancing Script', serif;
   font-size: 1.8rem;
   margin: 0;
+  padding: 0 20px;
 }
-
 
 .navbar-links {
   display: flex;
@@ -306,7 +332,7 @@ footer {
 .navbar-links a {
   text-decoration: none;
   color: #fff;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s;
@@ -318,16 +344,16 @@ footer {
 
 .navbar-icons .icon {
   color: #fff;
-  margin-left: 20px;
   transition: color 0.3s;
+  margin-right: 20px;
 }
 
 .logo-link {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -336,8 +362,9 @@ footer {
 }
 
 .search-bar:focus {
-  border-color: red; 
+  border-color: red;
 }
+
 
 
 /* Fonts */
@@ -363,7 +390,7 @@ footer {
 }
 
 .highlight {
-  color: #800000; 
+  color: red; 
 }
 
 
@@ -385,7 +412,7 @@ footer {
 }
 
 .cta-button:hover {
-  background-color: darkred;
+  background-color: red;
 }
 
 /* Featured Products Section Styles */
@@ -437,7 +464,7 @@ footer {
 }
 
 .product button:hover {
-  background-color: darkred;
+  background-color: red;
 }
 
 /* Categories Section Styles */
@@ -490,7 +517,7 @@ footer {
   background-color: whitesmoke;
   padding: 50px;
   position: relative;
-  height: 600px; /* Adjust as needed */
+  height: 600px;
   overflow: hidden;
 }
 
@@ -498,7 +525,7 @@ footer {
   z-index: 2; 
   display: flex;
   flex-direction: column; 
- margin-top:100px;
+ margin-top:150px;
 }
 
 .hero-content h1 {
@@ -516,9 +543,8 @@ footer {
 }
 
 .highlight {
-  color:maroon;
+  color :red;
 }
-
 
 .hero-image {
   position: absolute;
@@ -566,15 +592,12 @@ footer {
   color: white;
 }
 
-
 .features {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 30px 20px;
   background-color:white;
-  
- 
 }
 
 .feature {
@@ -621,6 +644,7 @@ footer {
   }
 }
 
+/* Daily Deals Section */
 .daily-deals {
   padding: 2rem;
   text-align: center;
@@ -632,59 +656,64 @@ footer {
   margin-bottom: 1.5rem;
   color: black;
 }
+
 .daily-deals-heading {
-  text-align: center; 
-  text-decoration: underline; 
+  text-align: center;
+  text-decoration: underline;
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
 .deals-highlight {
-  color: darkred;
+  color: red;
 }
 
-.products-grid {
+.products-grids {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  justify-items: center;
+  gap: 25px; 
+  
 }
-
 .product {
-  background-color: #fff;
-  border: 2.5px solid black;
-  border-radius: 1px;
-  padding: 1rem;
-  text-align: left;
+  background-color:white;
+  text-align: center;
   max-width: 250px;
   transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 auto; 
+  border: 2px solid black; 
+  overflow: hidden;
+  border-radius: 0;
+  padding:0;
+  
 }
 
-.product img,
-.product video {
-  width: 100%;
+.product img{
+  width: 100%; 
   height: 400px; 
-  object-fit: cover;
-  border-radius:0px;
+  object-fit: cover; 
+}
+.product video {
+  width: 100%; 
+  height: 400px; 
+  object-fit: cover; 
+  border-radius: 0 !important;
+  
 }
 
 .product p {
-  font-size: 1rem;
+  font-size: 1.1rem; 
   margin: 0.5rem 0;
   color: black;
+  text-align: center; 
 }
 
 .product span {
   font-size: 1.2rem;
-  color: #000;
+  color: red;
   font-weight: bold;
 }
 
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 @media (max-width: 768px) {
   .products-grid {

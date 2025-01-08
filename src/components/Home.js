@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles.css";
 
+
 const Home = () => {
   const dealsRef = useRef(null);
 
@@ -29,7 +30,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            <span className="step">Step Into</span>
+            <span className="step">Step Into </span>
             <span className="fashion">Fashion</span>: 
             <span className="highlight">Shop the Look <br />Today</span>
           </h1>
@@ -70,22 +71,22 @@ const Home = () => {
 {/* Daily Deals Section */}
 <section className="daily-deals" ref={dealsRef}>
 <h2 className="daily-deals-heading">
-  Daily <span className="deals-highlight">DEALS</span>!
+  Best<span className="deals-highlight"> SELLERS</span>!
 </h2>
-  <div className="products-grid">
+  <div className="products-grids">
     {[
-      { name: "CROP TOP", price: "Rs. 1500", img: "/crop top.jpg" },
-      { name: "", price: "Rs. 350", video: "/Heels.mp4" },
-      { name: "", price: "Rs. 4200", img: "/earring1.jpg" },
-      { name: "", price: "Rs. 4500", img: "/formalpants.jpg" },
-      { name: "", price: "Rs. 4700", img: "/crop1.jpg" },
-      { name: "", price: "Rs. 4800", img: "/earring2.jpg" },
-      { name: "", price: "Rs. 450", video: "/earring.mp4" },
-      { name: "", price: "Rs. 4900", img: "/Grunch.jpg" },
-      { name: "", price: "Rs. 5000", img: "/earring3.jpg" },
-      { name: "", price: "Rs. 4000", video: "/Heels1.mp4" },
-      { name: "", price: "Rs. 5000", img: "/Heels2.jpg" },
-      { name: "", price: "Rs. 5000", img: "/Heels3.jpg" },
+      { name: "BACKLESS CROP TOP", price: "Rs. 1500", img: "/crop top.jpg" },
+      { name: "LOW RISE SANDAL", price: "Rs. 1000", video: "/Heels.mp4" },
+      { name: "GOLDEN EARRING", price: "Rs. 4200", img: "/earring1.jpg" },
+      { name: "FORMAL GREY PANTS", price: "Rs. 4500", img: "/formalpants.jpg" },
+      { name: "BABY TEE", price: "Rs. 4700", img: "/crop1.jpg" },
+      { name: "GOLDEN ROUND HOOPS", price: "Rs. 4800", img: "/earring2.jpg" },
+      { name: "PEARL EARRING", price: "Rs. 2550", video: "/earring.mp4" },
+      { name: "ONE SIDE CUT PANTS", price: "Rs. 4900", img: "/Grunch.jpg" },
+      { name: "DIAMOND EARRINGS", price: "Rs. 5000", img: "/earring3.jpg" },
+      { name: "POINTED HEELS", price: "Rs. 4000", video: "/Heels1.mp4" },
+      { name: "PENCIL HIGH HEELS", price: "Rs. 5000", img: "/Heels2.jpg" },
+      { name: "ANKLE BOOTS", price: "Rs. 5000", img: "/Heels3.jpg" },
 
     ].map((item, index) => (
       <div className="product" key={index}>
